@@ -1,0 +1,130 @@
+
+body, html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh 70vh 30vh;
+    grid-template-areas:
+        "main"
+        "projects"
+        "footer";
+}
+
+
+ a{
+    text-decoration: none;
+}
+
+.hook{
+    font-size: 30px;
+    margin-right: 50px;
+    color:rgba(255, 255, 255, 0.8);
+}
+navbar {
+    height:10vh;
+    width:100%;
+    position: fixed;
+    background-color: #007FFF;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+    /*flex-wrap: wrap;*/
+}
+
+#welcome-section {
+    grid-area: main;
+    background-color: #91C8FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 0px;
+}
+#projects{
+    grid-area: projects;
+    background-color: white;
+}
+.project{
+  list-style:none;
+  display:flex;
+  flex-wrap:wrap;
+  margin: 0;
+  padding: 0;
+  justify-content:center;
+}
+.card-item{
+  display:flex;
+  padding:1rem;
+}
+.card{
+  border-radius:0.5rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+.card-img{
+  background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	height:200px;
+	width:200px;
+}
+.card-img-flower{
+  background-image: url('https://unsplash.it/800/600?image=82');
+}
+
+.card-img-river{
+  background-image: url(https://unsplash.it/800/600?image=11);
+}
+.card-img-record{
+  background-image: url(https://unsplash.it/800/600?image=39);
+}
+
+.project-title{
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #588EC3;
+}
+
+.social
+{
+    list-style: none;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2em;
+
+}
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+/*@media only screen and (min-width: 768px) {
+
+    body {
+        margin: 0;
+        display: grid;
+        grid-template-columns: auto 27% 27% 27%;
+        grid-template-rows: 8% 30% auto 10%;
+        grid-template-areas:
+            "sidebar header header header"
+            "sidebar sect1  sect2  sect3"
+            "sidebar main   main   main"
+            "sidebar footer footer footer";
+    }
+
+}*/
